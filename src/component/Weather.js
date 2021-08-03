@@ -30,8 +30,8 @@ export default class weather extends Component {
 
     OnsubmitHandler(e){
         e.preventDefault()
-       
-        axios.get('https://api.openweathermap.org/data/2.5/weather?q='+this.state.city+'&units=metric&appid=').then((res)=>{
+        
+        axios.get('https://api.openweathermap.org/data/2.5/weather?q='+this.state.city+'&units=metric&appid=b863c9a18c5cf1bcb28d873c929f47fe').then((res)=>{
            console.log(res.data)
            this.setState({temp:res.data.main.temp})
            this.setState({humdity:res.data.main.humidity})
